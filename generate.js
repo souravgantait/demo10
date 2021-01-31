@@ -37,7 +37,39 @@ function getA1Cdata() {
       document.getElementById("patientFN").innerText = error.stack;
     }
   );
-  let container = document.getElementById('containerId');let ulElem = document.createElement('ul');ulElem.setAttribute('id', 'myTab');ulElem.className= 'nav nav-tabs';let liElem0 = document.createElement('li');let aElem0= document.createElement('a');aElem0.setAttribute('href','#pane0');liElem0.className= 'active nav-item';aElem0.className= 'nav-link active';aElem0.setAttribute('data-toggle','tab');aElem0.innerHTML = 'Page1';liElem0.appendChild(aElem0);ulElem.appendChild(liElem0);container.appendChild(ulElem);let tabContent = document.createElement('div');tabContent.className='tab-content';let tabPane0 = document.createElement('div');tabPane0.className='tab-pane fade in active';tabPane0.setAttribute('id','pane0');let tblRow0=null; let tblCell0=null;tblRow0 = document.createElement('div');tblRow0.classList.add('row'); tblCell0 = document.createElement('div');tblCell0.className='col-sm-6';tblCell0.setAttribute('style', 'padding: 40px;');tblRow0.appendChild(tblCell0);displayBarChart(tblCell0,'Observation','VITAL SIGN (BMI)');; tblCell0 = document.createElement('div');tblCell0.className='col-sm-6';tblCell0.setAttribute('style', 'padding: 40px;');tblRow0.appendChild(tblCell0);displayLine(tblCell0,'Observation','LAB (Createnine)');;tabPane0.appendChild(tblRow0);tabContent.appendChild(tabPane0);container.appendChild(tabContent);
+  let container = document.getElementById('containerId');
+  let ulElem = document.createElement('ul');
+  ulElem.setAttribute('id', 'myTab');
+  ulElem.className= 'nav nav-tabs';
+  let liElem0 = document.createElement('li');
+  let aElem0= document.createElement('a');
+  aElem0.setAttribute('href','#pane0');
+  liElem0.className= 'active nav-item';
+  aElem0.className= 'nav-link active';
+  aElem0.setAttribute('data-toggle','tab');
+  aElem0.innerHTML = 'Page1';liElem0.appendChild(aElem0);
+  ulElem.appendChild(liElem0);container.appendChild(ulElem);
+  let tabContent = document.createElement('div');
+  tabContent.className='tab-content';
+  let tabPane0 = document.createElement('div');
+  tabPane0.className='tab-pane fade in active';
+  tabPane0.setAttribute('id','pane0');
+  let tblRow0=null; 
+  let tblCell0=null;tblRow0 = document.createElement('div');
+  tblRow0.classList.add('row'); 
+  tblCell0 = document.createElement('div');
+  tblCell0.className='col-sm-6';
+  tblCell0.setAttribute('style', 'padding: 40px;');
+  tblRow0.appendChild(tblCell0);
+  displayBarChart(tblCell0,'Observation','VITAL SIGN (BMI)');; 
+  tblCell0 = document.createElement('div');
+  tblCell0.className='col-sm-6';
+  tblCell0.setAttribute('style', 'padding: 40px;');
+  tblRow0.appendChild(tblCell0);
+  displayLine(tblCell0,'Observation','LAB (Createnine)');;
+  tabPane0.appendChild(tblRow0);
+  tabContent.appendChild(tabPane0);
+  container.appendChild(tabContent);
 }
 
 function displayBarChart(container, type, params) {
